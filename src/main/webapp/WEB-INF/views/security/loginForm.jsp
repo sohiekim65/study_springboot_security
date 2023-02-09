@@ -47,11 +47,6 @@
             required=""
           />
         </p>
-        <input
-          name="_csrf"
-          type="hidden"
-          value="a91f4863-06f8-4eb9-a228-da9bd283593f"
-        />
         <button class="btn btn-lg btn-primary btn-block" type="submit">
           Sign in
         </button>
