@@ -34,6 +34,7 @@
             placeholder="Username"
             required=""
             autofocus=""
+            value="test_01"
           />
         </p>
         <p>
@@ -45,6 +46,7 @@
             class="form-control"
             placeholder="Password"
             required=""
+            value="1234"
           />
         </p>
         <button class="btn btn-lg btn-primary btn-block" type="submit">
