@@ -25,6 +25,7 @@ public class SecurityConfiguration {
         
             // 로그인에 대한 부분
             httpSecurity.formLogin().loginPage("/loginForm")
+                .failureUrl("/loginForm?fail=true")   // 로그인 잘못되었다는 신호 보내기
                 .loginProcessingUrl("/login") // 여기 /login은 spring 주소창 /login
                 .defaultSuccessUrl("/");
 
