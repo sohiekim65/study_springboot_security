@@ -3,6 +3,7 @@ package com.study.study_springboot_security.configurations;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -29,4 +30,11 @@ public class SecurityConfiguration {
 
         return httpSecurity.build();    // build는 SecurityFilterChain와 httpSecurity 타입이 안맞아서 해줌.
     }
+
+    // 비밀번호 부분(내부적으로 갖고있는 기능)
+    @Bean   // bean으로 등록해서 클래스 메소드처럼 바로 사용 가능하게
+    public BCryptPasswordEncoder encoderPasswordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
 }
